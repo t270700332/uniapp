@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
+		<image class="logo" src="/static/img/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
@@ -11,7 +11,7 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: '我的app'
 			}
 		},
 		onLoad() {
@@ -24,11 +24,15 @@
 </script>
 
 <style>
+    @import "/static/css/common.css";
+    
 	.content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+        background-color: #fff6df;
+        height:100%;
 	}
 
 	.logo {
