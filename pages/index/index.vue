@@ -24,7 +24,7 @@
 </script>
 
 <style>
-    @import "/static/css/common.css";
+    @import "../../common/css/common.css";
     
 	.content {
 		display: flex;
