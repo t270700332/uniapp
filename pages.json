@@ -22,17 +22,17 @@
         "color": "#007AFF",
         "selectedColor": "#4CD964",
         "borderStyle": "black",
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#274349",
         "list": [{
             "pagePath": "pages/index/index",
-            "iconPath": "static/image/icon_component.png",
-            "selectedIconPath": "static/image/icon_component_HL.png",
-            "text": "组件"
+            "iconPath": "static/img/index/index.png",
+            "selectedIconPath": "static/img/index/index.png",
+            "text": "首页"
         }, {
             "pagePath": "pages/index/index1",
             "iconPath": "static/image/icon_API.png",
             "selectedIconPath": "static/image/icon_API_HL.png",
-            "text": "接口"
+            "text": "社区"
         }]
     }
 }
