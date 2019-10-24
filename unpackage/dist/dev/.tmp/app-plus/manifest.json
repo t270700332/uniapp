@@ -35,7 +35,6 @@
     },
     "popGesture": "close",
     "launchwebview": {
-      "render": "always",
       "id": "1",
       "kernel": "WKWebview",
       "uni-app": "auto"
@@ -83,7 +82,14 @@
         }
       }
     },
+    "arguments": "{\"name\":\"\",\"path\":\"\",\"query\":\"\",\"id\":0}",
     "allowsInlineMediaPlayback": true,
+    "safearea": {
+      "background": "#274349",
+      "bottom": {
+        "offset": "auto"
+      }
+    },
     "uni-app": {
       "compilerVersion": "2.3.6",
       "control": "v8",
@@ -92,6 +98,31 @@
       "nvue": {
         "flex-direction": "column"
       }
+    },
+    "tabBar": {
+      "color": "#007AFF",
+      "selectedColor": "#4CD964",
+      "borderStyle": "rgba(0,0,0,0.4)",
+      "backgroundColor": "#274349",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "static/img/index/index.png",
+          "selectedIconPath": "static/img/index/index.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/index/index1",
+          "iconPath": "static/image/icon_API.png",
+          "selectedIconPath": "static/image/icon_API_HL.png",
+          "text": "社区"
+        }
+      ],
+      "height": "50px",
+      "child": [
+        "lauchwebview"
+      ],
+      "selected": 0
     }
   }
 }
