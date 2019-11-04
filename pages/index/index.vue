@@ -122,6 +122,16 @@
     .swiper-item-img{
         width: 100%;
         background-size:100% 100%;
+        border-radius: 10px;
+        height: 190px;
     }
     
+    .swiper{
+      height: 200px;
+     }  
+    .swiper-item{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+    }
 </style>
