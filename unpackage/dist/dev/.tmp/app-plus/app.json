@@ -36,6 +36,6 @@
     "autoclose": false
   },
   "appname": "MyFirstApp",
-  "compilerVersion": "2.3.6",
+  "compilerVersion": "2.4.2",
   "usingComponents": {}
 }
