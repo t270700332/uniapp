@@ -60,18 +60,19 @@
 			 <view class="uni-title uni-common-mt" style="margin-top: 10px;padding: 0 0;position: relative;">
 				 <image src="/static/img/index/index.png" style="width: 20px;height: 20px;margin-left: 8px;position: absolute;top: 8px;"></image>
 				 <text style="font-size: 16px;color: black;font-weight: 600;margin-left: 10px;position: absolute;left: 25px;top: 7px;">论坛热点</text>
+				 <image src="/static/img/index/suiji.png" style="width: 20px;height: 20px;right: 10px;position: absolute;top: 8px;"></image>
 			 </view>
-			 <view class="uni-flex uni-column">
-				 <view class="flex-item flex-item-V uni-bg-red">A</view>
-				 <view class="flex-item flex-item-V uni-bg-green">B</view>
-				 <view class="flex-item flex-item-V uni-bg-blue">C</view>
-			 </view>
+			 <hotNoteList></hotNoteList>
 		</view>
 	</view>
 </template>
 
 <script>
+	import hotNoteList from "../../components/index/hotNoteList.vue";
 	export default {
+		components: {
+		      hotNoteList
+		},
 		data() {
 			return {
 				title: '我的app',
@@ -93,6 +94,9 @@
 <style>
 	@import "../../common/css/common.css";
 
+    uni-page-body{
+		background-color: #591804;
+    }
 	.content {
 		display: flex;
 		flex-direction: column;
@@ -193,17 +197,9 @@
 		margin-right: 2%;
 	} 
 	
-	.flex-item-V {
-		width: 100%;
-		height: 150upx;
-		text-align: center;
-		line-height: 150upx;
-		width: 100%;
-		height: 60px;
-		text-align: center;
-		line-height: 75px;
-		margin-top: 0PX;
-		border-radius: 0PX;
-		background-color: #fff0cd;
+	.uni-title{
+		height: 40px;
+	    border-bottom: 1px solid #d6d7d8;
 	}
+	
 </style>
