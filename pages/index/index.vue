@@ -55,6 +55,18 @@
 					发现</view>
 			 </view>
 		</view>
+		
+		<view calss="uni-padding-wrap uni-common-mt" style="background-color: #fff0cd;">
+			 <view class="uni-title uni-common-mt" style="margin-top: 10px;padding: 0 0;position: relative;">
+				 <image src="/static/img/index/index.png" style="width: 20px;height: 20px;margin-left: 8px;position: absolute;top: 8px;"></image>
+				 <text style="font-size: 16px;color: black;font-weight: 600;margin-left: 10px;position: absolute;left: 25px;top: 7px;">论坛热点</text>
+			 </view>
+			 <view class="uni-flex uni-column">
+				 <view class="flex-item flex-item-V uni-bg-red">A</view>
+				 <view class="flex-item flex-item-V uni-bg-green">B</view>
+				 <view class="flex-item flex-item-V uni-bg-blue">C</view>
+			 </view>
+		</view>
 	</view>
 </template>
 
@@ -181,4 +193,17 @@
 		margin-right: 2%;
 	} 
 	
+	.flex-item-V {
+		width: 100%;
+		height: 150upx;
+		text-align: center;
+		line-height: 150upx;
+		width: 100%;
+		height: 60px;
+		text-align: center;
+		line-height: 75px;
+		margin-top: 0PX;
+		border-radius: 0PX;
+		background-color: #fff0cd;
+	}
 </style>

@@ -1114,6 +1114,21 @@ Z(z[17])
 Z(z[30])
 Z(z[31])
 Z([3,'发现'])
+Z([3,'uni-padding-wrap uni-common-mt'])
+Z([3,'background-color:#fff0cd;'])
+Z([3,'uni-title uni-common-mt'])
+Z([3,'margin-top:10px;padding:0 0;position:relative;'])
+Z([3,'/static/img/index/index.png'])
+Z([3,'width:20px;height:20px;margin-left:8px;position:absolute;top:8px;'])
+Z([3,'font-size:16px;color:black;font-weight:600;margin-left:10px;position:absolute;left:25px;top:7px;'])
+Z([3,'论坛热点'])
+Z([3,'uni-flex uni-column'])
+Z([3,'flex-item flex-item-V uni-bg-red'])
+Z([3,'A'])
+Z([3,'flex-item flex-item-V uni-bg-green'])
+Z([3,'B'])
+Z([3,'flex-item flex-item-V uni-bg-blue'])
+Z([3,'C'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_1);return __WXML_GLOBAL__.ops_cached.$gwx_1
 }
 function gz$gwx_2(){
@@ -1227,6 +1242,35 @@ _(cAB,lCB)
 _(oX,cAB)
 _(cW,oX)
 _(oB,cW)
+var aDB=_mz(z,'view',['calss',53,'style',1],[],e,s,gg)
+var tEB=_mz(z,'view',['class',55,'style',1],[],e,s,gg)
+var eFB=_mz(z,'image',['src',57,'style',1],[],e,s,gg)
+_(tEB,eFB)
+var bGB=_n('text')
+_rz(z,bGB,'style',59,e,s,gg)
+var oHB=_oz(z,60,e,s,gg)
+_(bGB,oHB)
+_(tEB,bGB)
+_(aDB,tEB)
+var xIB=_n('view')
+_rz(z,xIB,'class',61,e,s,gg)
+var oJB=_n('view')
+_rz(z,oJB,'class',62,e,s,gg)
+var fKB=_oz(z,63,e,s,gg)
+_(oJB,fKB)
+_(xIB,oJB)
+var cLB=_n('view')
+_rz(z,cLB,'class',64,e,s,gg)
+var hMB=_oz(z,65,e,s,gg)
+_(cLB,hMB)
+_(xIB,cLB)
+var oNB=_n('view')
+_rz(z,oNB,'class',66,e,s,gg)
+var cOB=_oz(z,67,e,s,gg)
+_(oNB,cOB)
+_(xIB,oNB)
+_(aDB,xIB)
+_(oB,aDB)
 _(r,oB)
 return r
 }
@@ -1234,19 +1278,19 @@ e_[x[0]]={f:m0,j:[],i:[],ti:[],ic:[]}
 d_[x[1]]={}
 var m1=function(e,s,r,gg){
 var z=gz$gwx_2()
-var tEB=_n('view')
-_rz(z,tEB,'class',0,e,s,gg)
-var eFB=_mz(z,'image',['class',1,'src',1],[],e,s,gg)
-_(tEB,eFB)
-var bGB=_n('view')
-_rz(z,bGB,'class',3,e,s,gg)
-var oHB=_n('text')
-_rz(z,oHB,'class',4,e,s,gg)
-var xIB=_oz(z,5,e,s,gg)
-_(oHB,xIB)
-_(bGB,oHB)
-_(tEB,bGB)
-_(r,tEB)
+var lQB=_n('view')
+_rz(z,lQB,'class',0,e,s,gg)
+var aRB=_mz(z,'image',['class',1,'src',1],[],e,s,gg)
+_(lQB,aRB)
+var tSB=_n('view')
+_rz(z,tSB,'class',3,e,s,gg)
+var eTB=_n('text')
+_rz(z,eTB,'class',4,e,s,gg)
+var bUB=_oz(z,5,e,s,gg)
+_(eTB,bUB)
+_(tSB,eTB)
+_(lQB,tSB)
+_(r,lQB)
 return r
 }
 e_[x[1]]={f:m1,j:[],i:[],ti:[],ic:[]}
@@ -1374,7 +1418,7 @@ setCssToHead([])();setCssToHead([[2,0]],undefined,{path:"./app.wxss"})();
 __wxAppCode__['app.wxss']=setCssToHead([[2,0]],undefined,{path:"./app.wxss"});    
 __wxAppCode__['app.wxml']=$gwx('./app.wxml');
 
-__wxAppCode__['pages/index/index.wxss']=setCssToHead(["wx-uni-page-body{ height: 100%; }\n.",[1],"content { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; background-color: #fff6df; height: 100%; }\n.",[1],"carousel-wrap{ background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #fff0cd), color-stop(50%, #274349)); background: -o-linear-gradient(bottom, #fff0cd 50%, #274349 50%); background: linear-gradient(to top, #fff0cd 50%, #274349 50%); }\n.",[1],"title { font-size: ",[0,36],"; color: #8f8f94; }\n.",[1],"index-header { width: 100%; height: ",[0,100],"; background-color: #274349; }\n.",[1],"img-view { width: ",[0,70],"; height: ",[0,70],"; display: inline-block; margin-left: 10px; margin-top: 10px; }\n#user-img { width: 100%; height: 100%; border-radius: 50%; }\n.",[1],"user-name-text { width: 100px; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; font-size: 16px; color: #C0C0C0; display: inline-block; position: absolute; top: 60px; left: 60px; }\n.",[1],"status_bar { height: var(--status-bar-height); width: 100%; }\n.",[1],"swiper-item-img{ width: 100%; background-size:100% 100%; border-radius: 10px; height: 190px; }\n.",[1],"swiper{ height: 200px; }\n.",[1],"swiper-item{ padding-left: 10px; padding-right: 10px; padding-top: 5px; }\n.",[1],"flex-item { margin-top:15px ; width: 20%; height: 60px; text-align: center; border-radius: 10px; background-color: #555555; }\n.",[1],"uni-bg-1{ margin-left: 2%; margin-right: 4%; }\n.",[1],"uni-bg-2{ margin-right: 4%; }\n.",[1],"uni-bg-3{ margin-right: 4%; }\n.",[1],"uni-bg-4{ margin-right: 4%; }\n.",[1],"uni-bg-5{ margin-right: 2%; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/index/index.wxss:46:1)",{path:"./pages/index/index.wxss"});    
+__wxAppCode__['pages/index/index.wxss']=setCssToHead(["wx-uni-page-body{ height: 100%; }\n.",[1],"content { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; background-color: #fff6df; height: 100%; }\n.",[1],"carousel-wrap{ background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #fff0cd), color-stop(50%, #274349)); background: -o-linear-gradient(bottom, #fff0cd 50%, #274349 50%); background: linear-gradient(to top, #fff0cd 50%, #274349 50%); }\n.",[1],"title { font-size: ",[0,36],"; color: #8f8f94; }\n.",[1],"index-header { width: 100%; height: ",[0,100],"; background-color: #274349; }\n.",[1],"img-view { width: ",[0,70],"; height: ",[0,70],"; display: inline-block; margin-left: 10px; margin-top: 10px; }\n#user-img { width: 100%; height: 100%; border-radius: 50%; }\n.",[1],"user-name-text { width: 100px; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; font-size: 16px; color: #C0C0C0; display: inline-block; position: absolute; top: 60px; left: 60px; }\n.",[1],"status_bar { height: var(--status-bar-height); width: 100%; }\n.",[1],"swiper-item-img{ width: 100%; background-size:100% 100%; border-radius: 10px; height: 190px; }\n.",[1],"swiper{ height: 200px; }\n.",[1],"swiper-item{ padding-left: 10px; padding-right: 10px; padding-top: 5px; }\n.",[1],"flex-item { margin-top:15px ; width: 20%; height: 60px; text-align: center; border-radius: 10px; background-color: #555555; }\n.",[1],"uni-bg-1{ margin-left: 2%; margin-right: 4%; }\n.",[1],"uni-bg-2{ margin-right: 4%; }\n.",[1],"uni-bg-3{ margin-right: 4%; }\n.",[1],"uni-bg-4{ margin-right: 4%; }\n.",[1],"uni-bg-5{ margin-right: 2%; }\n.",[1],"flex-item-V { width: 100%; height: ",[0,150],"; text-align: center; line-height: ",[0,150],"; width: 100%; height: 60px; text-align: center; line-height: 75px; margin-top: 0PX; border-radius: 0PX; background-color: #fff0cd; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/index/index.wxss:46:1)",{path:"./pages/index/index.wxss"});    
 __wxAppCode__['pages/index/index.wxml']=$gwx('./pages/index/index.wxml');
 
 __wxAppCode__['pages/index/index1.wxss']=setCssToHead(["wx-uni-page-body{ height: 100%; }\n.",[1],"content { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; background-color: #fff6df; height:100%; }\n.",[1],"logo { height: ",[0,200],"; width: ",[0,200],"; margin-top: ",[0,200],"; margin-left: auto; margin-right: auto; margin-bottom: ",[0,50],"; }\n.",[1],"text-area { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }\n.",[1],"title { font-size: ",[0,36],"; color: #8f8f94; }\n",],undefined,{path:"./pages/index/index1.wxss"});    
