@@ -4,8 +4,13 @@
             "path": "pages/index/index",
             "style": {
                 "navigationBarTitleText": "首页",
-				"navigationStyle":"custom"
-            }
+				"navigationStyle":"custom",
+				"enablePullDownRefresh" : false,
+				"disableScroll": true, // 禁止滚动, 解决scroll-view在Android小程序卡顿的问题
+				"app-plus" : {
+						"bounce" : "none" // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
+                 }
+			}
         },{
             "path": "pages/index/index1",
             "style": {

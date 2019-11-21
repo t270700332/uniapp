@@ -1,7 +1,12 @@
 {
   "navigationBarTitleText": "首页",
   "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "disableScroll": true,
+  "bounce": "none",
   "usingComponents": {
-    "hot-note-list": "/components/index/hotNoteList"
+    "hot-note-list": "/components/index/hotNoteList",
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "pd-list": "/components/index/pd-list"
   }
 }
