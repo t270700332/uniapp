@@ -24,34 +24,66 @@
 
 
 
+
+
+
+
+
 /*数据列表*/
+.pd-list{
+	margin-top: 10px;
+}
 .pd-li{
 	position: relative;
-	height: 160rpx;
-	padding: 20rpx 16rpx 20rpx 240rpx;
-	border-bottom: 1rpx solid #eee;
+	height: 260rpx;
+	padding: 20rpx 16rpx 36rpx 16rpx;
+	border-bottom: 1px solid #d6d7d8;
+	background-color: #fff0cd;
 }
 .pd-li .pd-img{
-	position: absolute !important; /*编译到H5,在list-mescroll-more的案例中需加上!important,解决tab切换过快定位失效的问题*/
-	left: 36rpx;
-	top: 20rpx;
-	width: 160rpx;
-	height: 160rpx;
+	/* position: absolute !important; *//*编译到H5,在list-mescroll-more的案例中需加上!important,解决tab切换过快定位失效的问题*/
+	/* left: 36upx;
+	top: 20upx; */
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
 }
 .pd-li .pd-name{
+	position: absolute;
 	font-size: 26rpx;
-	line-height: 40rpx;
-	height: 80rpx;
-	margin-bottom: 20rpx;
 	overflow: hidden;
+	z-index: 2;
+	bottom: 0px;
+	width: 100%;
+	background-color: rgb(103,113,117,0.5);
+	bottom: 9px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	color: #FFF6DF;
+	font-weight: 500;
+	padding-left: 10px;
 }
-.pd-li .pd-price{
+.pd-title{
+	position: absolute;
 	font-size: 26rpx;
+	overflow: hidden;
+	z-index: 2;
+	bottom: 0px;
+	width: 100%;
+	background-color: rgb(103,113,117,0.5);
+	bottom: 9px;
+	color: #FFF6DF;
+	font-weight: 500;
+	border-top-left-radius: 6px;
+	text-align:center;
+}
+/* .pd-li .pd-price{
+	font-size: 26upx;
 	color: red;
 }
 .pd-li .pd-sold{
-	font-size: 24rpx;
-	margin-left: 16rpx;
+	font-size: 24upx;
+	margin-left: 16upx;
 	color: gray;
-}
+} */
 

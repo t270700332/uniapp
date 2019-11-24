@@ -1,6 +1,5 @@
  <template>
-<mescroll-uni :down="downOption" @down="downCallback" :up="upOption" @up="upCallback" @init="mescrollInit">
-	<view>
+	 <view>
 		<view class="status_bar">
 			<!-- 这里是状态栏 -->
 		</view>
@@ -14,6 +13,7 @@
 	        	</view>
 	        </view>     	
 		</view>
+		<mescroll-uni :down="downOption" @down="downCallback" :up="upOption" @up="upCallback" @init="mescrollInit">
 		<view class="carousel-wrap">
             <view class="page-section swiper">
                 <view class="page-section-spacing">
@@ -66,8 +66,8 @@
 			 <hotNoteList></hotNoteList>
 		</view>
 	<pd-list :list="pdList"></pd-list>
-	</view>
 	</mescroll-uni>
+	</view>
 </template>
 
 <script>
@@ -93,7 +93,7 @@
 				// 下拉刷新的常用配置
 				downOption: { 
 					use: false, // 是否启用下拉刷新; 默认true
-					auto: true, // 是否在初始化完毕之后自动执行下拉刷新的回调; 默认true
+					auto: false, // 是否在初始化完毕之后自动执行下拉刷新的回调; 默认true
 					autoShowLoading: false, // 如果设置auto=true(在初始化完毕之后自动执行下拉刷新的回调),那么是否显示下拉刷新的进度; 默认false
 					isLock: false, // 是否锁定下拉刷新,默认false;
 					offset: 80, // 在列表顶部,下拉大于80upx,松手即可触发下拉刷新的回调
@@ -115,11 +115,11 @@
 					isBounce: false, // 默认禁止橡皮筋的回弹效果, 必读事项: http://www.mescroll.com/qa.html?v=190725#q25
 					page: {
 						num: 0, // 当前页码,默认0,回调之前会加1,即callback(page)会从1开始
-						size: 10, // 每页数据的数量
+						size: 5   , // 每页数据的数量
 						time: null // 加载第一页数据服务器返回的时间; 防止用户翻页时,后台新增了数据从而导致下一页数据重复;
 					},
 					noMoreSize: 3, // 如果列表已无数据,可设置列表的总数量要大于等于5条才显示无更多数据;避免列表数据过少(比如只有一条数据),显示无更多数据会不好看
-					offset: 10, // 距底部多远时,触发upCallback
+					offset: 1, // 距底部多远时,触发upCallback
 					textLoading: '加载中 ...', // 加载中的提示文本
 					textNoMore: '-- END --', // 没有更多数据的提示文本
 					toTop: {
@@ -134,7 +134,7 @@
 						tip: '~ 暂无相关数据 ~', // 提示
 						btnText: '去逛逛 >', // 按钮
 						fixed: false, // 是否使用fixed定位,默认false; 配置fixed为true,以下的top和zIndex才生效
-						top: "35%", // fixed定位的top值 (完整的单位值,如 "35%"; "300upx")
+						top: "15%", // fixed定位的top值 (完整的单位值,如 "35%"; "300upx")
 						zIndex: 99 // fixed定位z-index值
 					},
 					onScroll: true // 是否监听滚动事件, 默认false (配置为true时,可@scroll="scroll"获取到滚动条位置和方向)
@@ -159,7 +159,7 @@
 				this.getListDataFromNet(mescroll.num, mescroll.size, (curPageData)=>{
 					//联网成功的回调,隐藏下拉刷新和上拉加载的状态;
 					//mescroll会根据传的参数,自动判断列表如果无任何数据,则提示空;列表无下一页数据,则提示无更多数据;
-					console.log("mescroll.num=" + mescroll.num + ", mescroll.size=" + mescroll.size + ", curPageData.length=" + curPageData.length);
+					//console.log("mescroll.num=" + mescroll.num + ", mescroll.size=" + mescroll.size + ", curPageData.length=" + curPageData.length);
 				
 					//方法一(推荐): 后台接口有返回列表的总页数 totalPage
 					//mescroll.endByPage(curPageData.length, totalPage); //必传参数(当前页的数据个数, 总页数)
@@ -194,12 +194,10 @@
 						for (let k = 0; k < mockData.length; k++) {
 							listData.push(mockData[k])
 						}
-						console.log(listData)
 						// 回调
 						successCallback && successCallback(listData);
 					} catch (e) {
 						//联网失败的回调\
-						console.log(11)
 						errorCallback && errorCallback();
 					}
 				},1000)

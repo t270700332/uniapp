@@ -1,6 +1,4 @@
-uni-page-body{
-    height: 100%;
-}
+
 uni-page-body{
 		background-color: #591804;
 }

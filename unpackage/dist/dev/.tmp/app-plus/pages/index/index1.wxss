@@ -1,6 +1,4 @@
-uni-page-body{
-    height: 100%;
-}
+
 .content {
 		display: -webkit-box;
 		display: -webkit-flex;
