@@ -8,7 +8,19 @@
 				"enablePullDownRefresh" : false,
 				"disableScroll": true, // 禁止滚动, 解决scroll-view在Android小程序卡顿的问题
 				"app-plus" : {
-						"bounce" : "none" // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
+						"bounce" : "none" ,// 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
+						"subNVues":[{  
+							"id": "drawer", // 唯一标识  
+							"path": "pages/index/subnvue/drawer", // 页面路径  
+							"type": "popup",  //这里不需要  
+							"style": {  
+								//"position": "absolute",  
+								//"dock": "right",  
+								"width": "80%"
+								//"height": "150upx",  
+								//"background": "transparent"  
+							}  
+						}]  
                  }
 			}
         },{

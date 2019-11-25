@@ -4,6 +4,16 @@
   "enablePullDownRefresh": false,
   "disableScroll": true,
   "bounce": "none",
+  "subNVues": [
+    {
+      "id": "drawer",
+      "path": "pages/index/subnvue/drawer",
+      "type": "popup",
+      "style": {
+        "width": "80%"
+      }
+    }
+  ],
   "usingComponents": {
     "hot-note-list": "/components/index/hotNoteList",
     "mescroll-uni": "/components/mescroll-uni/mescroll-uni",

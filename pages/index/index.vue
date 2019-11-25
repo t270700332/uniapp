@@ -4,7 +4,7 @@
 			<!-- 这里是状态栏 -->
 		</view>
 		<view style="width:100%;"> 
-	        <view class="index-header">
+	        <view class="index-header"  @click="showDrawer">
 	        	<view class="img-view">
 	        		<image src="/static/img/logo.png" mode="" id="user-img"></image>
 	        	</view>
@@ -146,6 +146,9 @@
 		onLoad() {
 
 		},
+		onUnload() {
+			uni.$off('drawer-page')
+		},
 		methods: {
 			// mescroll组件初始化的回调,可获取到mescroll对象
 			mescrollInit(mescroll) {
@@ -201,7 +204,10 @@
 						errorCallback && errorCallback();
 					}
 				},1000)
-			}
+			},
+			showDrawer() {
+				uni.getSubNVueById('drawer').show('slide-in-left', 200);
+			},
 		}
 	}
 </script>
