@@ -1,19 +1,50 @@
 <template>
-    <div class="wrapper">
-		<text class="nav-text">左侧列表</text>
-		<list class="list-wrapper">
-			<cell v-for="item in lists" :key="item.id">
-				<div class="text-wrapper" @click="clickitem(item.id)">
-					<text style="font-size: 30upx; ">{{item.name}}</text>
-					<text class="icon">&#xe583;</text>
+    <div class="wrapper" style="padding-right: 0px;">
+		<div class="wrapper-head">
+			<image src="../../../static/img/index/headerimg.jpg" style="width: 100%;"></image>
+		</div>
+		<div style="padding-top: 5px;">
+			<div class="list-wrapper">
+				<div>
+					<div class="text-wrapper">
+						<text style="font-size: 30upx; ">个人信息</text>
+						<text class="icon">&#xe583;</text>
+					</div>
+					<div class="text-wrapper">
+						<text style="font-size: 30upx; ">论坛签名</text>
+						<text class="icon">&#xe583;</text>
+					</div>
+					<div class="text-wrapper">
+						<text style="font-size: 30upx; ">论坛皮肤</text>
+						<text class="icon">&#xe583;</text>
+					</div>
 				</div>
-			</cell>
-		</list>
-		<div style="flex: 1; text-align: center;">
-			<div class="close-drawer" @click="hideDrawer">
-				<text style="font-size: 34upx; text-align: center;">关闭抽屉</text>
+				<div style="height:10px;background-color: #f5e8cb;"></div>
+				<div style="">
+					<div class="text-wrapper">
+						<text style="font-size: 30upx; ">我的贴子</text>
+						<text class="icon">&#xe583;</text>
+					</div>
+					<div class="text-wrapper">
+						<text style="font-size: 30upx; ">我的回复</text>
+						<text class="icon">&#xe583;</text>
+					</div>
+					<div class="text-wrapper">
+						<text style="font-size: 30upx; ">我的评分</text>
+						<text class="icon">&#xe583;</text>
+					</div>
+					<div class="text-wrapper">
+						<text style="font-size: 30upx; ">我的收藏</text>
+						<text class="icon">&#xe583;</text>
+					</div>
+					<div class="text-wrapper">
+						<text style="font-size: 30upx; ">浏览历史</text>
+						<text class="icon">&#xe583;</text>
+					</div>
+				</div>
 			</div>
 		</div>
+		
     </div>
 </template>
 
@@ -25,19 +56,19 @@
 			}
 		},
 		beforeCreate() {
-			 const domModule = weex.requireModule('dom')
+			const domModule = weex.requireModule('dom')
 			domModule.addRule('fontFace', {
 				fontFamily: "unibtn",
 				'src': "url('../../../static/uni.ttf')"
 			}); 
 		},
 		created() {
-			for(let i = 0; i < 5; i++){
+			/* for(let i = 0; i < 5; i++){
 				this.lists.push({
 					id: i,
 					name: 'Item' + i,
 				});
-			}
+			} */
 		},
         methods: {
             hideDrawer() {
@@ -48,49 +79,32 @@
 			}
         }
     }
-</script>
+</script>     
 
 <style>
 	.wrapper {
 		flex-direction: column;
 		flex: 1;
-		text-align: center;
-		padding: 60upx 0upx 0upx 20upx;
 		background-color: #fff0cd;
+		padding: 0px 0px;
 	}
-	.nav-text {
-		color: #8f8f94; 
-		/* #ifndef APP-PLUS-NVUE */
-		margin-bottom: 40px;
-		/* #endif */
-		/* #ifdef APP-PLUS-NVUE */
-		margin-bottom: 40upx;
-		/* #endif */
+	.wrapper-head{
+		width: 100%;
+		padding-left: 0px;
 	}
+	
 	.list-wrapper {
-		/* #ifdef APP-PLUS-NVUE */
-		height: 450upx;
-		/* #endif */
-		/* #ifndef APP-PLUS-NVUE */
-		height: 450px;
-		/* #endif */
+		height: 600px;
 	}
 	.text-wrapper {
-		justify-content: center;
+		justify-content:center;
 		border-bottom-style: solid;
-		border-bottom-width: 1upx;
+		border-bottom-width: 1px;
 		border-bottom-color: rgba(0,0,0,.2);
-		margin-bottom: 35upx;
-		padding-bottom: 15upx;
-	}
-	.close-drawer {
-		background-color: #f8f8f8;
-		width: 300upx;
-		padding: 15upx;
-		border-radius: 20upx;
-		border-style: solid;
-		border-width: 1upx;
-		border-color: rgba(0,0,0,.2);
+		height: 44px;
+		padding-left: 10px;
+		 /*margin-bottom: 35upx;
+		padding-bottom: 15upx; */
 	}
 	.icon {
 		position: absolute;

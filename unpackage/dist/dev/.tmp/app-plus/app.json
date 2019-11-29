@@ -1,13 +1,15 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/index/index1"
+    "pages/index/index"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "Hello uniapp",
+    "navigationBarBackgroundColor": "#007AFF",
+    "backgroundColor": "#F8F8F8",
+    "backgroundColorTop": "#F4F5F6",
+    "backgroundColorBottom": "#F4F5F6",
+    "background": "#F4F5F6"
   },
   "tabBar": {
     "color": "#007AFF",
@@ -28,6 +30,17 @@
         "text": "社区"
       }
     ]
+  },
+  "nvue": {
+    "pages": {
+      "pages/index/index1.html": {
+        "window": {
+          "usingComponents": {},
+          "navigationStyle": "custom"
+        },
+        "nvue": true
+      }
+    }
   },
   "nvueCompiler": "uni-app",
   "renderer": "auto",

@@ -1,10 +1,10 @@
  <template>
 	 <view>
-		<view class="status_bar">
+		<view class="status_bar" >
 			<!-- 这里是状态栏 -->
 		</view>
-		<view style="width:100%;"> 
-	        <view class="index-header"  @click="showDrawer">
+		<view style="width:100%;" > 
+	        <view class="index-header"  @click="showDrawer" style="overflow-y: hidden;overflow-x: hidden;position:fixed;">
 	        	<view class="img-view">
 	        		<image src="/static/img/logo.png" mode="" id="user-img"></image>
 	        	</view>
@@ -241,6 +241,7 @@
 		width: 100%;
 		height: 100upx;
 		background-color: #274349;
+		margin-top: 44px;
 	}
 
 	.img-view {
@@ -266,13 +267,17 @@
 		color: #C0C0C0;
         display: inline-block;
         position: absolute;
-        top: 60px;
+        top: 14px;
         left: 60px;
 	}
 
 	.status_bar {
 		height: var(--status-bar-height);
 		width: 100%;
+		background-color: #274349;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		position:fixed;
 	}
     
     .swiper-item-img{
