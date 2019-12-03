@@ -22,7 +22,4 @@ export default [{
 }, {
 	name: '国家地理俱乐部',
 	id: 'lishi'
-}, {
-	name: '本地',
-	id: 'bendi'
 }]
