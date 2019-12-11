@@ -5,27 +5,22 @@ uni-page-body{
 .content {
 		display: -webkit-box;
 		display: -webkit-flex;
-		display: -ms-flexbox;
 		display: flex;
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: column;
-		    -ms-flex-direction: column;
 		        flex-direction: column;
 		-webkit-box-align: center;
 		-webkit-align-items: center;
-		    -ms-flex-align: center;
 		        align-items: center;
 		-webkit-box-pack: center;
 		-webkit-justify-content: center;
-		    -ms-flex-pack: center;
 		        justify-content: center;
 		background-color: #fff6df;
 		height: 100%;
 }
 .carousel-wrap{
-		background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #fff0cd), color-stop(50%, #274349));
-		background: -o-linear-gradient(bottom, #fff0cd 50%, #274349 50%);
+		background: -webkit-linear-gradient(bottom, #fff0cd 50%, #274349 50%);
 		background: linear-gradient(to top, #fff0cd 50%, #274349 50%);
 }
 .title {
@@ -53,8 +48,7 @@ uni-page-body{
 .user-name-text {
 		width: 100px;
 		overflow: hidden; /*超出的文本隐藏 */
-		-o-text-overflow: ellipsis;
-		   text-overflow: ellipsis; /*溢出用省略号显示 */
+		text-overflow: ellipsis; /*溢出用省略号显示 */
 		white-space: nowrap; /*溢出不换行 */
 		font-size: 16px;
 		color: #C0C0C0;

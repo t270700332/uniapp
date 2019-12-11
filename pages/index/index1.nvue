@@ -1,263 +1,273 @@
 <template>
-	<view class="status_bar" >
+	<view class="status_bar">
 		<!-- 这里是状态栏 -->
 	</view>
-    <view class="tabs" style="margin-top: 40px;">
-        <scroll-view id="tab-bar" class="scroll-h" :scroll-x="true" :show-scrollbar="false" :scroll-into-view="scrollInto" 
-		  style="background-color: #274349;">
-            <view v-for="(tab,index) in tabBars" :key="tab.id" class="uni-tab-item" :id="tab.id" :data-current="index" @click="ontabtap">
-                <text class="uni-tab-item-title" :class="tabIndex==index ? 'uni-tab-item-title-active' : ''">{{tab.name}}</text>
-            </view>
-        </scroll-view>  
-        <view class="line-h"></view>
-        <swiper :current="tabIndex" class="swiper-box" style="flex: 1;" :duration="300" @change="ontabchange">
-            <swiper-item class="swiper-item" v-for="(news,index) in newsDataList" :key="index">
-				<view v-for="(tab,index1) in news.image_list" :key="index1" style="width: 33%;">
-					<image class="swiper-item-img" :src="tab.url" mode="" style="width: 80px;height: 80px;margin-top: 30px;float:left;margin-left: 32px;margin-right: 24px;"></image>
-					<text style="text-align: center;padding-left: 10px;font-size: 14px;margin-top: 10px;">{{tab.name}}</text>
+	<view class="tabs" style="margin-top: 40px;">
+		<scroll-view id="tab-bar" class="scroll-h" :scroll-x="true" :show-scrollbar="false" :scroll-into-view="scrollInto"
+		 style="background-color: #274349;">
+			<view v-for="(tab,index) in tabBars" :key="tab.id" class="uni-tab-item" :id="tab.id" :data-current="index" @click="ontabtap">
+				<text class="uni-tab-item-title" :class="tabIndex==index ? 'uni-tab-item-title-active' : ''">{{tab.name}}</text>
+			</view>
+		</scroll-view>
+		<view class="line-h"></view>
+		<swiper :current="tabIndex" class="swiper-box" :duration="300" @change="ontabchange">
+			<swiper-item v-for="(news,index) in newsDataList" :key="index">
+				<view v-for="(tab,index1) in news.image_list" :key="index1">
+					<text v-if="index!=0" class="list-name">{{tab.name}}</text>
+					<view class="swiper-item">
+						<view v-for="(tab2,index2) in  tab.list" :key="index2">
+							<image class="swiper-item-img" :src="tab2.url" mode=""></image>
+							<text class="list-text">{{tab2.name}}</text>
+						</view>
+					</view>
 				</view>
-            </swiper-item>
-        </swiper>
-    </view>
+			</swiper-item>
+		</swiper>
+	</view>
 </template>
 <script>
-    import mediaItem from './news-item.nvue';
-    import tabBars from "../../common/js/tabBars.js"; // 模拟数据
+	import mediaItem from './news-item.nvue';
+	import tabBars from "../../common/js/tabBars.js"; // 模拟数据
 	import sqData from "../../common/js/sqList.js"; // 模拟数据
-    // 缓存每页最多
-    const MAX_CACHE_DATA = 100;
-    // 缓存页签数量
-    const MAX_CACHE_PAGE = 3;
+	// 缓存每页最多
+	const MAX_CACHE_DATA = 100;
+	// 缓存页签数量
+	const MAX_CACHE_PAGE = 3;
 
-    const newsData = sqData;
-    export default {
-        components: {
-            mediaItem
-        },
-        data() {
-            return {
-				newsDataList:sqData,
-                newsList: [],
-                cacheTab: [],
-                tabIndex: 0,
-                tabBars: tabBars,
-                scrollInto: "",
-                showTips: false,
-                navigateFlag: false,
-                pulling: false,
-                refreshIcon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB5QTFRFcHBw3Nzct7e39vb2ycnJioqK7e3tpqam29vb////D8oK7wAAAAp0Uk5T////////////ALLMLM8AAABxSURBVHja7JVBDoAgDASrjqj//7CJBi90iyYeOHTPMwmFZrHjYyyFYYUy1bwUZqtJIYVxhf1a6u0R7iUvWsCcrEtwJHp8MwMdvh2amHduiZD3rpWId9+BgPd7Cc2LIkPyqvlQvKxKBJ//Qwq/CacAAwDUv0a0YuKhzgAAAABJRU5ErkJggg=="
-            }
-        },
-        onLoad() {
-			
-        },
-        methods: {
-            getList(index) {
-                /* let activeTab = this.newsList[index];
-                let list = [];
-                for (let i = 0; i <= 7; i++) {
-                    let item = Object.assign({}, newsData['data'+i]);
-                    item.id = this.newGuid();
-                    list.push(item);
-                }
-                activeTab.data = activeTab.data.concat(list); */
-            },
-            ontabtap(e) {
-                let index = e.target.dataset.current || e.currentTarget.dataset.current;
-                this.switchTab(index);
-            },
-            ontabchange(e) {
-                let index = e.target.current || e.detail.current;
-                this.switchTab(index);
-            },
-            switchTab(index) {
-                /* if (this.newsList[index].data.length === 0) {
-                    this.getList(index);
-                } */
+	const newsData = sqData;
+	export default {
+		components: {
+			mediaItem
+		},
+		data() {
+			return {
+				newsDataList: sqData,
+				newsList: [],
+				cacheTab: [],
+				tabIndex: 0,
+				tabBars: tabBars,
+				scrollInto: "",
+				showTips: false,
+				navigateFlag: false,
+				pulling: false,
+				refreshIcon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB5QTFRFcHBw3Nzct7e39vb2ycnJioqK7e3tpqam29vb////D8oK7wAAAAp0Uk5T////////////ALLMLM8AAABxSURBVHja7JVBDoAgDASrjqj//7CJBi90iyYeOHTPMwmFZrHjYyyFYYUy1bwUZqtJIYVxhf1a6u0R7iUvWsCcrEtwJHp8MwMdvh2amHduiZD3rpWId9+BgPd7Cc2LIkPyqvlQvKxKBJ//Qwq/CacAAwDUv0a0YuKhzgAAAABJRU5ErkJggg=="
+			}
+		},
+		onLoad() {
 
-                if (this.tabIndex === index) {
-                    return;
-                }
+		},
+		methods: {
+			getList(index) {
+				/* let activeTab = this.newsList[index];
+				let list = [];
+				for (let i = 0; i <= 7; i++) {
+				    let item = Object.assign({}, newsData['data'+i]);
+				    item.id = this.newGuid();
+				    list.push(item);
+				}
+				activeTab.data = activeTab.data.concat(list); */
+			},
+			ontabtap(e) {
+				let index = e.target.dataset.current || e.currentTarget.dataset.current;
+				this.switchTab(index);
+			},
+			ontabchange(e) {
+				let index = e.target.current || e.detail.current;
+				this.switchTab(index);
+			},
+			switchTab(index) {
+				/* if (this.newsList[index].data.length === 0) {
+				    this.getList(index);
+				} */
 
-                // 缓存 tabId
-                /* if (this.newsList[this.tabIndex].data.length > MAX_CACHE_DATA) {
-                    let isExist = this.cacheTab.indexOf(this.tabIndex);
-                    if (isExist < 0) {
-                        this.cacheTab.push(this.tabIndex);
-                    }
-                } */
+				if (this.tabIndex === index) {
+					return;
+				}
 
-                this.tabIndex = index;
-                this.scrollInto = this.tabBars[index].id;
+				// 缓存 tabId
+				/* if (this.newsList[this.tabIndex].data.length > MAX_CACHE_DATA) {
+				    let isExist = this.cacheTab.indexOf(this.tabIndex);
+				    if (isExist < 0) {
+				        this.cacheTab.push(this.tabIndex);
+				    }
+				} */
 
-                // 释放 tabId
-                /* if (this.cacheTab.length > MAX_CACHE_PAGE) {
-                    let cacheIndex = this.cacheTab[0];
-                    this.clearTabData(cacheIndex);
-                    this.cacheTab.splice(0, 1);
-                } */
-            },
-            clearTabData(e) {
-                this.newsList[e].data.length = 0;
-            },
-            refreshData() {},
-            onrefresh(e) {
-                var tab = this.newsList[this.tabIndex];
-                if (!tab.refreshFlag) {
-                    return;
-                }
-                tab.refreshing = true;
+				this.tabIndex = index;
+				this.scrollInto = this.tabBars[index].id;
 
-                setTimeout(() => {
-                    this.refreshData();
-                    this.pulling = true;
-                    tab.refreshing = false;
+				// 释放 tabId
+				/* if (this.cacheTab.length > MAX_CACHE_PAGE) {
+				    let cacheIndex = this.cacheTab[0];
+				    this.clearTabData(cacheIndex);
+				    this.cacheTab.splice(0, 1);
+				} */
+			},
+			clearTabData(e) {
+				this.newsList[e].data.length = 0;
+			},
+			refreshData() {},
+			onrefresh(e) {
+				var tab = this.newsList[this.tabIndex];
+				if (!tab.refreshFlag) {
+					return;
+				}
+				tab.refreshing = true;
+
+				setTimeout(() => {
+					this.refreshData();
+					this.pulling = true;
+					tab.refreshing = false;
 					tab.refreshFlag = false;
-                    setTimeout(() => { // TODO fix ios和Android 动画时间相反问题
-                        this.pulling = false;
-                    }, 500);
-                }, 2000);
-            },
-            onpullingdown(e) {
-                var tab = this.newsList[this.tabIndex];
-                if (tab.refreshing || this.pulling) {
-                    return;
-                }
-                if (Math.abs(e.pullingDistance) > Math.abs(e.viewHeight)) {
-                    tab.refreshFlag = true;
-                } else {
-                    tab.refreshFlag = false;
-                }
-            },
-            newGuid() {
-                let s4 = function() {
-                    return (65536 * (1 + Math.random()) | 0).toString(16).substring(1);
-                }
-                return (s4() + s4() + "-" + s4() + "-4" + s4().substr(0, 3) + "-" + s4() + "-" + s4() + s4() + s4()).toUpperCase();
-            }
-        }
-    }
+					setTimeout(() => { // TODO fix ios和Android 动画时间相反问题
+						this.pulling = false;
+					}, 500);
+				}, 2000);
+			},
+			onpullingdown(e) {
+				var tab = this.newsList[this.tabIndex];
+				if (tab.refreshing || this.pulling) {
+					return;
+				}
+				if (Math.abs(e.pullingDistance) > Math.abs(e.viewHeight)) {
+					tab.refreshFlag = true;
+				} else {
+					tab.refreshFlag = false;
+				}
+			},
+			newGuid() {
+				let s4 = function() {
+					return (65536 * (1 + Math.random()) | 0).toString(16).substring(1);
+				}
+				return (s4() + s4() + "-" + s4() + "-4" + s4().substr(0, 3) + "-" + s4() + "-" + s4() + s4() + s4()).toUpperCase();
+			}
+		}
+	}
 </script>
 
 <style>
 	.status_bar {
-		height:40px;
+		height: 40px;
 		width: 800px;
 		background-color: #274349;
 		position: fixed;
 	}
-	
-    /* #ifndef APP-PLUS */
-    page {
-        width: 100%;
-        min-height: 100%;
-        display: flex;
-    }
 
-    /* #endif */
+	/* #ifndef APP-PLUS */
+	page {
+		width: 100%;
+		min-height: 100%;
+		display: flex;
+	}
 
-    .tabs {
-        flex: 1;
-        flex-direction: column;
-        overflow: hidden;
-        background-color: #ffffff;
-        /* #ifdef MP-ALIPAY || MP-BAIDU */
-        height: 100vh;
-        /* #endif */
-    }
+	/* #endif */
 
-    .scroll-h {
-        width: 750upx;
-        height: 80upx;
-        flex-direction: row;
-        /* #ifndef APP-PLUS */
-        white-space: nowrap;
-        /* #endif */
-        /* flex-wrap: nowrap; */
-        /* border-color: #cccccc;
+	.tabs {
+		flex: 1;
+		flex-direction: column;
+		overflow: hidden;
+		background-color: #ffffff;
+		/* #ifdef MP-ALIPAY || MP-BAIDU */
+		height: 100vh;
+		/* #endif */
+	}
+
+	.scroll-h {
+		width: 750upx;
+		height: 80upx;
+		flex-direction: row;
+		/* #ifndef APP-PLUS */
+		white-space: nowrap;
+		/* #endif */
+		/* flex-wrap: nowrap; */
+		/* border-color: #cccccc;
 		border-bottom-style: solid;
 		border-bottom-width: 1px; */
-    }
+	}
 
-    .line-h {
-        height: 1upx;
-        background-color: #cccccc;
-    }
+	.line-h {
+		height: 1upx;
+		background-color: #cccccc;
+	}
 
-    .uni-tab-item {
-        /* #ifndef APP-PLUS */
-        display: inline-block;
-        /* #endif */
-        flex-wrap: nowrap;
-        padding-left: 20upx;
-        padding-right: 20upx;
-    }
+	.uni-tab-item {
+		/* #ifndef APP-PLUS */
+		display: inline-block;
+		/* #endif */
+		flex-wrap: nowrap;
+		padding-left: 20upx;
+		padding-right: 20upx;
+	}
 
-    .uni-tab-item-title {
-        color: #8f8f94;
-        font-size: 28upx;
-        height: 80upx;
-        line-height: 80upx;
-        flex-wrap: nowrap;
-        /* #ifndef APP-PLUS */
-        white-space: nowrap;
-        /* #endif */
-    }
+	.uni-tab-item-title {
+		color: #8f8f94;
+		font-size: 28upx;
+		height: 80upx;
+		line-height: 80upx;
+		flex-wrap: nowrap;
+		/* #ifndef APP-PLUS */
+		white-space: nowrap;
+		/* #endif */
+	}
 
-    .uni-tab-item-title-active {
-        color: #ebb46c;
+	.uni-tab-item-title-active {
+		color: #ebb46c;
 		font-size: 36upx;
-    }
+	}
 
-    .swiper-box {
-        flex: 1;
-		background-color:#fff6df; 
-    }
+	.swiper-box {
+		flex: 1;
+		background-color: #fff6df;
+	}
 
-    .swiper-item {
-        flex: 1;
-        flex-direction: row;
-		flex-wrap:wrap;
-    }
+	.swiper-item {
+		flex: 1;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 
-    .scroll-v {
-        flex: 1;
-        /* #ifndef MP-ALIPAY */
-        flex-direction: column;
-        /* #endif */
-        width: 750upx;
-    }
+	.list-name {
+		margin-top: 20px;
+		margin-left: 20px;
+		font-size: 13px;
+	}
 
-    .update-tips {
-        position: absolute;
-        left: 0;
-        top: 41px;
-        right: 0;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        background-color: #FDDD9B;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
+	.list-text {
+		text-align: center;
+		padding-left: 10px;
+		font-size: 14px;
+		margin-top: 10px;
+	}
 
-    .update-tips-text {
-        font-size: 14px;
-        color: #ffffff;
-    }
+	.swiper-item-img {
+		width: 80px;
+		height: 80px;
+		margin-top: 20px;
+		margin-left: 32px;
+		margin-right: 24px;
+	}
 
-    .refresh {
-        width: 750upx;
-        height: 64px;
-        justify-content: center;
-    }
 
-    .refresh-view {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-    }
+	.scroll-v {
+		flex: 1;
+		/* #ifndef MP-ALIPAY */
+		flex-direction: column;
+		/* #endif */
+		width: 750upx;
+	}
+
+
+	.refresh {
+		width: 750upx;
+		height: 64px;
+		justify-content: center;
+	}
+
+	.refresh-view {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+	}
 
 	.refresh-icon {
 		width: 30px;
@@ -279,22 +289,22 @@
 		color: #999999;
 	}
 
-    .loading-text {
-        margin-left: 2px;
-        font-size: 16px;
-        color: #999999;
-    }
+	.loading-text {
+		margin-left: 2px;
+		font-size: 16px;
+		color: #999999;
+	}
 
-    .loading-more {
-        align-items: center;
-        justify-content: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        text-align: center;
-    }
+	.loading-more {
+		align-items: center;
+		justify-content: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+	}
 
-    .loading-more-text {
-        font-size: 28upx;
-        color: #999;
-    }
+	.loading-more-text {
+		font-size: 28upx;
+		color: #999;
+	}
 </style>
