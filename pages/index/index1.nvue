@@ -10,17 +10,19 @@
 			</view>
 		</scroll-view>
 		<view class="line-h"></view>
-		<swiper :current="tabIndex" class="swiper-box" :duration="300" @change="ontabchange">
-			<swiper-item v-for="(news,index) in newsDataList" :key="index">
+		<swiper :current="tabIndex"  class="swiper-box"  :duration="300" @change="ontabchange">
+			<swiper-item v-for="(news,index) in newsDataList" :key="index" >
+				<scroll-view class="scroll-v list" scroll-y>
 				<view v-for="(tab,index1) in news.image_list" :key="index1">
 					<text v-if="index!=0" class="list-name">{{tab.name}}</text>
-					<view class="swiper-item">
+					<view class="swiper-item" scroll-y>
 						<view v-for="(tab2,index2) in  tab.list" :key="index2">
 							<image class="swiper-item-img" :src="tab2.url" mode=""></image>
 							<text class="list-text">{{tab2.name}}</text>
 						</view>
 					</view>
 				</view>
+				</scroll-view>
 			</swiper-item>
 		</swiper>
 	</view>
@@ -229,6 +231,7 @@
 		margin-top: 20px;
 		margin-left: 20px;
 		font-size: 13px;
+		color: #ebb46c;
 	}
 
 	.list-text {

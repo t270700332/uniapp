@@ -91,7 +91,7 @@
       }
     },
     "uni-app": {
-      "compilerVersion": "2.4.5",
+      "compilerVersion": "2.4.6",
       "control": "v8",
       "nvueCompiler": "uni-app",
       "renderer": "auto",
@@ -100,7 +100,7 @@
       }
     },
     "tabBar": {
-      "color": "#007AFF",
+      "color": "#865640",
       "selectedColor": "#4CD964",
       "borderStyle": "rgba(0,0,0,0.4)",
       "backgroundColor": "#274349",
@@ -108,13 +108,13 @@
         {
           "pagePath": "pages/index/index",
           "iconPath": "static/img/index/index.png",
-          "selectedIconPath": "static/img/index/index.png",
+          "selectedIconPath": "static/img/index/index1.png",
           "text": "首页"
         },
         {
           "pagePath": "pages/index/index1",
-          "iconPath": "static/image/icon_API.png",
-          "selectedIconPath": "static/image/icon_API_HL.png",
+          "iconPath": "static/img/index/default.png",
+          "selectedIconPath": "static/img/index/default1.png",
           "text": "社区"
         }
       ],
