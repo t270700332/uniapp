@@ -83,8 +83,8 @@
 				return uni.upx2px(Number(this.top || 0))
 			},
 			fixedTop() {
-				//return this.fixed ? (this.numTop + this.windowTop) + 'px' : 0
-				return 99+'px'
+				return this.fixed ? (this.numTop + this.windowTop) + 'px' : 0
+				//return 99+'px'
 			},
 			padTop() {
 				return !this.fixed ? this.numTop + 'px' : 0

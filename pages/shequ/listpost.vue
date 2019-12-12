@@ -2,7 +2,6 @@
 	<view>
 		<!-- 菜单 -->
 		<view class="top-warp">
-			<view class="tip">每次切换菜单及时刷新列表,不缓存数据</view>
 			<view class="nav">
 				<view :class="{active:tabType==0}" @click="changeTab(0)">全部</view>
 				<view :class="{active:tabType==1}" @click="changeTab(1)">奶粉</view>
@@ -12,7 +11,7 @@
 		</view>
 		
 		<!-- top="xxx"下拉布局往下偏移,防止被悬浮菜单遮住 -->
-		<mescroll-uni top="120" @down="downCallback" :up="upOption" @up="upCallback" @emptyclick="emptyClick" @init="mescrollInit">
+		<mescroll-uni top="60"  @down="downCallback" :up="upOption" @up="upCallback" @emptyclick="emptyClick" @init="mescrollInit">
 			<!-- 数据列表 -->
 			<pd-list :list="pdList"></pd-list>
 		</mescroll-uni>
@@ -149,17 +148,11 @@
 	.top-warp{
 		z-index: 9990;
 		position: fixed;
-		top: --window-top; /* css变量 */
+		top: 0; /* css变量 */
 		left: 0;
 		width: 100%;
-		height: 120upx;
-		background-color: white;
-	}
-	.top-warp .tip{
-		font-size: 28upx;
 		height: 60upx;
-		line-height: 60upx;
-		text-align: center;
+		background-color: whlite;
 	}
 	.top-warp .nav{
 		text-align: center;

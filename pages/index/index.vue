@@ -13,7 +13,7 @@
 	        	</view>
 	        </view>     	
 		</view>
-		<mescroll-uni :down="downOption" @down="downCallback" :up="upOption" @up="upCallback" @init="mescrollInit">
+		<mescroll-uni top="180" :down="downOption" @down="downCallback" :up="upOption" @up="upCallback" @init="mescrollInit">
 		<view class="carousel-wrap">
             <view class="page-section swiper">
                 <view class="page-section-spacing">
