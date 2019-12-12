@@ -17,7 +17,7 @@
 					<text v-if="index!=0" class="list-name">{{tab.name}}</text>
 					<view class="swiper-item" scroll-y>
 						<view v-for="(tab2,index2) in  tab.list" :key="index2">
-							<image class="swiper-item-img" :src="tab2.url" mode=""></image>
+							<image class="swiper-item-img" :src="tab2.url" mode="" @click="toShequ(tab2.name)"></image>
 							<text class="list-text">{{tab2.name}}</text>
 						</view>
 					</view>
@@ -52,10 +52,9 @@
 				showTips: false,
 				navigateFlag: false,
 				pulling: false,
-				refreshIcon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB5QTFRFcHBw3Nzct7e39vb2ycnJioqK7e3tpqam29vb////D8oK7wAAAAp0Uk5T////////////ALLMLM8AAABxSURBVHja7JVBDoAgDASrjqj//7CJBi90iyYeOHTPMwmFZrHjYyyFYYUy1bwUZqtJIYVxhf1a6u0R7iUvWsCcrEtwJHp8MwMdvh2amHduiZD3rpWId9+BgPd7Cc2LIkPyqvlQvKxKBJ//Qwq/CacAAwDUv0a0YuKhzgAAAABJRU5ErkJggg=="
 			}
 		},
-		onLoad() {
+		onLoad(){
 
 		},
 		methods: {
@@ -141,6 +140,11 @@
 					return (65536 * (1 + Math.random()) | 0).toString(16).substring(1);
 				}
 				return (s4() + s4() + "-" + s4() + "-4" + s4().substr(0, 3) + "-" + s4() + "-" + s4() + s4() + s4()).toUpperCase();
+			},
+			toShequ(name){
+				uni.navigateTo({
+					url:'../../pages/shequ/listpost?title='+name,
+				})
 			}
 		}
 	}

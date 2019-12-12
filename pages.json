@@ -29,6 +29,11 @@
             "style": {
                 "navigationStyle": "custom"
             }
+        },{
+            "path": "pages/shequ/listpost",
+            "style": {
+               "navigationBarTitleText": "社区页面" 
+            }
         }
     ],
    "globalStyle": {

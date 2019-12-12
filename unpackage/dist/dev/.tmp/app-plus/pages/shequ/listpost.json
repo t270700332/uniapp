@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "社区页面",
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "pd-list": "/components/shequ/pd-list"
+  }
+}
