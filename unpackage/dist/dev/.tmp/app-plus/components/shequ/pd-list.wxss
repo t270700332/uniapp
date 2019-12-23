@@ -1,60 +1,35 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .pd-list{
-	margin-top: 10px;
-} */
+.pd-list{
+	background-color: #fff6df;
+}
 /*数据列表*/
 .pd-li{
 	position: relative;
-	height: 160rpx;
-	padding: 20rpx 16rpx 20rpx 240rpx;
+	height: 100%;
+	padding: 20rpx 16rpx 0rpx 20rpx;
 	border-bottom: 1rpx solid #eee;
-}
-.pd-li .pd-img{
-	position: absolute !important; /*编译到H5,在list-mescroll-more的案例中需加上!important,解决tab切换过快定位失效的问题*/
-	left: 36rpx;
-	top: 20rpx;
-	width: 160rpx;
-	height: 160rpx;
 }
 .pd-li .pd-name{
 	font-size: 26rpx;
-	line-height: 40rpx;
-	height: 80rpx;
+	/* line-height: 40upx; */
+	height: 100%;
 	margin-bottom: 20rpx;
 	overflow: hidden;
 }
 .pd-li .pd-price{
 	font-size: 26rpx;
-	color: red;
+	color: gray;
 }
 .pd-li .pd-sold{
 	font-size: 24rpx;
-	margin-left: 16rpx;
+	margin-right: 60rpx;
+	color: gray;
+	float: right;
+}
+.pd-number{
+	float: right;
+	font-size: 24rpx;
+	margin-right: 10rpx;
 	color: gray;
 }
 

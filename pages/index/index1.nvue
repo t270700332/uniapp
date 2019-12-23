@@ -28,7 +28,6 @@
 	</view>
 </template>
 <script>
-	import mediaItem from './news-item.nvue';
 	import tabBars from "../../common/js/tabBars.js"; // 模拟数据
 	import sqData from "../../common/js/sqList.js"; // 模拟数据
 	// 缓存每页最多
@@ -39,7 +38,6 @@
 	const newsData = sqData;
 	export default {
 		components: {
-			mediaItem
 		},
 		data() {
 			return {

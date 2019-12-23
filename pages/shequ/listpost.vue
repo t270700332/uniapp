@@ -3,10 +3,10 @@
 		<!-- 菜单 -->
 		<view class="top-warp">
 			<view class="nav">
-				<view :class="{active:tabType==0}" @click="changeTab(0)">全部</view>
-				<view :class="{active:tabType==1}" @click="changeTab(1)">奶粉</view>
-				<view :class="{active:tabType==2}" @click="changeTab(2)">面膜</view>
-				<view :class="{active:tabType==3}" @click="changeTab(3)">图书</view>
+				<view :class="{active:tabType==0}" @click="changeTab(0)">置顶</view>
+				<view :class="{active:tabType==1}" @click="changeTab(1)">热帖</view>
+				<view :class="{active:tabType==2}" @click="changeTab(2)">精华</view>
+				<view :class="{active:tabType==3}" @click="changeTab(3)">版头</view>
 			</view>
 		</view>
 		
@@ -145,6 +145,9 @@
 </script>
 
 <style>
+	page {
+		background-color: #fff6df; 
+	} 
 	.top-warp{
 		z-index: 9990;
 		position: fixed;
@@ -152,7 +155,7 @@
 		left: 0;
 		width: 100%;
 		height: 60upx;
-		background-color: whlite;
+		background-color: #fff6df;
 	}
 	.top-warp .nav{
 		text-align: center;
@@ -166,7 +169,9 @@
 		font-size: 28upx;
 	}
 	.top-warp .nav .active{
-		border-bottom: 2upx solid #FF6990;
-		color: #FF6990;
+		border-bottom: 2upx solid #591804;
+		color: #591804;
 	}
+	
+	
 </style>

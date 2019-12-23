@@ -2,10 +2,10 @@
 <template>
 	<view class="pd-list">
 		<view class="pd-li" v-for="pd in list" :key="pd.id">
-			<image class="pd-img" :src="pd.pdImg" mode="widthFix"/>
-			<view class="pd-name">{{pd.pdName}}</view>
-			<text class="pd-price">{{pd.pdPrice}} 元</text>
-			<text class="pd-sold">已售{{pd.pdSold}}件</text>
+			<view class="pd-name" @click="toContent(pd.pdName)">{{pd.pdName}}</view>
+			<text class="pd-price">{{pd.pdPrice}}</text>
+			<text class="pd-number">{{pd.pdNumber}}</text>
+			<text class="pd-sold">{{pd.pdSold}}</text>
 		</view>
 	</view>
 </template>
@@ -19,42 +19,49 @@
 					return []
 				}
 			}
+		},
+		methods:{
+			toContent(title){
+			  
+			}
 		}
+		
 	}
 </script>
 
 <style>
-	/* .pd-list{
-		margin-top: 10px;
-	} */
+	.pd-list{
+		background-color: #fff6df;
+	}
 	/*数据列表*/
 	.pd-li{
 		position: relative;
-		height: 160upx;
-		padding: 20upx 16upx 20upx 240upx;
+		height: 100%;
+		padding: 20upx 16upx 0upx 20upx;
 		border-bottom: 1upx solid #eee;
-	}
-	.pd-li .pd-img{
-		position: absolute !important; /*编译到H5,在list-mescroll-more的案例中需加上!important,解决tab切换过快定位失效的问题*/
-		left: 36upx;
-		top: 20upx;
-		width: 160upx;
-		height: 160upx;
 	}
 	.pd-li .pd-name{
 		font-size: 26upx;
-		line-height: 40upx;
-		height: 80upx;
+		/* line-height: 40upx; */
+		height: 100%;
 		margin-bottom: 20upx;
 		overflow: hidden;
 	}
 	.pd-li .pd-price{
 		font-size: 26upx;
-		color: red;
+		color: gray;
 	}
 	.pd-li .pd-sold{
 		font-size: 24upx;
-		margin-left: 16upx;
+		margin-right: 60upx;
+		color: gray;
+		float: right;
+	}
+	
+	.pd-number{
+		float: right;
+		font-size: 24upx;
+		margin-right: 10upx;
 		color: gray;
 	}
 </style>

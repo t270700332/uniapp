@@ -1,4 +1,7 @@
 
+page {
+	background-color: #fff6df;
+}
 .top-warp{
 	z-index: 9990;
 	position: fixed;
@@ -6,7 +9,7 @@
 	left: 0;
 	width: 100%;
 	height: 60rpx;
-	background-color: whlite;
+	background-color: #fff6df;
 }
 .top-warp .nav{
 	text-align: center;
@@ -20,7 +23,9 @@
 	font-size: 28rpx;
 }
 .top-warp .nav .active{
-	border-bottom: 2rpx solid #FF6990;
-	color: #FF6990;
+	border-bottom: 2rpx solid #591804;
+	color: #591804;
 }
+
+
 
