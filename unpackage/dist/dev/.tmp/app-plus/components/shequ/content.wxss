@@ -1,0 +1,39 @@
+
+.pd-list {
+	background-color: #fff6df;
+}
+
+/*数据列表*/
+.pd-li {
+	position: relative;
+	height: 100%;
+	padding: 0rpx 0rpx 40rpx 20rpx;
+	border-bottom: 2rpx solid #eee;
+}
+.pd-li .pd-sold {
+	font-size: 24rpx;
+	margin-left: 0px;
+	color: gray;
+	position: absolute;
+	bottom: 0px;
+	right: 8px;
+}
+.pd-user {
+	border-bottom: 1rpx solid #eee;
+	border-top: 1rpx solid #eee;
+}
+.user-image {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.user-info {
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	width: 330px;
+}
+

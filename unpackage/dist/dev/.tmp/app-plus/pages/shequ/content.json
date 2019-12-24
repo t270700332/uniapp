@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "主题",
+  "scrollIndicator": "none",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#274349",
+  "disableScroll": true,
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "pd-list": "/components/shequ/content"
+  }
+}
