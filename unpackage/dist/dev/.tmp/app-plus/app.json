@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/shequ/listpost"
+    "pages/shequ/listpost",
+    "pages/shequ/content"
   ],
   "window": {
     "navigationBarTextStyle": "white",

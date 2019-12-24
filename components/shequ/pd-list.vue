@@ -1,8 +1,8 @@
 <!-- 商品列表组件 <pd-list :list="xx"></pd-list> -->
 <template>
 	<view class="pd-list">
-		<view class="pd-li" v-for="pd in list" :key="pd.id">
-			<view class="pd-name" @click="toContent(pd.pdName)">{{pd.pdName}}</view>
+		<view class="pd-li" v-for="pd in list" :key="pd.id"  @click="toContent(pd.pdName)">
+			<view class="pd-name">{{pd.pdName}}</view>
 			<text class="pd-price">{{pd.pdPrice}}</text>
 			<text class="pd-number">{{pd.pdNumber}}</text>
 			<text class="pd-sold">{{pd.pdSold}}</text>
@@ -22,7 +22,9 @@
 		},
 		methods:{
 			toContent(title){
-			  
+			  uni.navigateTo({
+			  	url:'../../pages/shequ/content?title='+title,
+			  })
 			}
 		}
 		

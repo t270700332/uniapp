@@ -38,6 +38,15 @@
 			   "navigationBarBackgroundColor":"#274349",
 			   "disableScroll": true// 禁止滚动, 解决scroll-view在Android小程序卡顿的问题
             }
+        },{
+            "path": "pages/shequ/content",
+            "style": {
+               "navigationBarTitleText": "主题",
+			   "scrollIndicator": "none",//不显示滚动条
+			   "enablePullDownRefresh" : false,
+			   "navigationBarBackgroundColor":"#274349",
+			   "disableScroll": true// 禁止滚动, 解决scroll-view在Android小程序卡顿的问题
+            }
         }
     ],
    "globalStyle": {
