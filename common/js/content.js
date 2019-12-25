@@ -1,120 +1,136 @@
 export default [{
-	"id": "1",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd1.jpg",
-	"content": "美国500强企业有100家通过“合理避税”，纳税额为0。<br/>就这样，川皇一上台还给企业减税汗<br/>KAG上 PS.中国大概是15%",
+	"id": "0",
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"content": "20191223再编辑，发声望放进法版的审核方式目前是仅作形式审查" +
+		"只要在本帖内回复声明自己具有法学相关背景，即可发声望放进去。" +
+		"不过如果在法版内发表了有问题言论则会踢出并永不放回。" +
+		"法版目前是我的个人版，什么是有问题言论，由本人自行判断，即实行独裁管理。" +
+		"-----" +
+		"编辑一下，没想到坛友们热情比较高，还有很多大佬能参与建设，楼主很感动" +
+		"鉴于板块比较特殊，且尚未形成较多充分、有价值的内容，因此目前限制声望进入，在本帖内回复具有法学相关经验的老哥可以先行进入(我挨个发声望)" +
+		"等板块建设有一定的成熟度了，会考虑逐步开放全部论坛用户浏览，以及相关的咨询功能。" +
+		"楼主时间也不是很多，忙完了就会慢慢审批进入" +
+		"RT，鉴于个人时间非常有限，希望在水区寻觅几位坛友一起建设法律方面的板块，目前暂时用的我的个版。" +
+		"初步设想的话有这几个方面的内容：1.时事案例评论；2. 法律法规整理；3. 咨询问答；4. 法理探讨。" +
+		"基于法律相关内容的敏感性，板块可能采用审核准入的方式进入。" +
+		"楼主希望参与板块建设的老哥熟悉论坛的操作，有一定的法学理论水平，有时间，有耐心，法学生及法律职业从业者均可。" +
+		"“楼主你为什么不找自己的同事、同学呢？”因为他们几乎没人玩NGA擦汗。" +
+		"这不是论坛版务公招，只是我个人的请求。" +
+		"羡慕没人的话我就多顶几下。",
 	"pdPrice": "Tinnk",
 	"pdSold": "11-22 18:04",
-	"pdNumber":10
+	"pdNumber": 10,
+	"userName": "大明芜湖王"
+}, {
+	"id": "1",
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "1小时前",
+	"pdNumber": 56,
+	"userName": "UID7645986",
+	"comment": "我沉了"
 }, {
 	"id": "2",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd2.jpg",
-	"content": "给有意的女人送口红，不知道怎么选好。",
-	"pdPrice": "相夫教子唐赛儿",
-	"pdSold": "1小时前",
-	"pdNumber":56
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 17:42",
+	"pdNumber": 210,
+	"userName": "流年一瞥",
+	"comment": "原来版主也会沉贴啊，看来我发帖沉也是正常的。"
 }, {
 	"id": "3",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd3.jpg",
-	"content": "hhhhhhhhh进去那个气功群之后发言过于活跃，被打微信电话了 ",
-	"pdPrice": "Neler23",
-	"pdSold": "今天 17:42",
-	"pdNumber":210
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 20:14",
+	"pdNumber": 333,
+	"userName": "我叫大V",
+	"comment": "才一分钟沉个鬼啊。。。"
 }, {
 	"id": "4",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd4.jpg",
-	"content": "微博可以看视奸你的人了，感觉我社会性死亡了 ",
-	"pdPrice": "乙辛丛卯姜邱",
-	"pdSold": "今天 20:14",
-	"pdNumber":333
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 18:53",
+	"pdNumber": 22,
+	"userName": "machbaby",
+	"comment": "这个得有很强的专业知识才行啊 不过我大NGA人均博士毕业 "
 }, {
 	"id": "5",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd5.jpg",
-	"content": "认真讨论，KTV唱什么歌能唱哭女同事？",
-	"pdPrice": "安静的屎",
-	"pdSold": "今天 18:53",
-	"pdNumber":22
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "01-02 16:08",
+	"pdNumber": "999+",
+	"userName": "ffj989",
+	"comment": "支持，不过这种专业性比较强的论坛不好弄啊"
 }, {
 	"id": "6",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd6.jpg",
-	"content": "2019年股市集中讨论帖：美股风云变幻、监管全面从严和IPO注册制推进，贸易摩擦下A股如何演绎？(切勿盲信他人言论，更不要盲信帖内大师大神) ",
-	"pdPrice": "nobleminded",
-	"pdSold": "01-02 16:08",
-	"pdNumber":"999+"
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 18:33",
+	"pdNumber": 81,
+	"userName": "TN水母",
+	"comment": "我强烈支持有时候有很多法律方面的问题都挺迷惑的，有一个板块能独立出来解答问题感觉挺好的但是我所学和法学不沾边，也不熟悉论坛操作所以只能精神上支持一下了 "
 }, {
 	"id": "7",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd7.jpg",
-	"content": "张居正比诸葛亮到底缺了什么导致名声不如诸葛 ",
-	"pdPrice": "神剑之巅梁月",
-	"pdSold": "今天 18:33",
-	"pdNumber":81
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "昨天 21:09",
+	"pdNumber": 196,
+	"userName": "dixabled",
+	"comment": "曾经做了5年律师，比较了解合同法和知识产权方面，目前是接家族企业，希望也能来为普法出点力"
 }, {
 	"id": "8",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd8.jpg",
-	"content": "我和死人聊微信，她说她生前是美女……(第七章已更新) ",
-	"pdPrice": "御前首相提利昂",
-	"pdSold": "昨天 21:09",
-	"pdNumber":196
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "12-17 00:23",
+	"pdNumber": 523,
+	"userName": "啧啧擦",
+	"comment": "我来学习一下过了法考但是毫无实操经验的小白 "
 }, {
 	"id": "9",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd9.jpg",
-	"content": "2019年即将过去，希望NGA的奇迹可以长久一些，再久一些。",
-	"pdPrice": "月光放大镜",
-	"pdSold": "12-17 00:23",
-	"pdNumber":523
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 00:44",
+	"pdNumber": 34,
+	"userName": "白菜稀饭",
+	"comment": "我沉了"
 }, {
 	"id": "10",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd10.jpg",
-	"content": "看了最新的吐槽大会 有点好奇逐梦演艺圈这电影了… ",
-	"pdPrice": "不说废话",
-	"pdSold": "今天 00:44",
-	"pdNumber":34
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 09:36",
+	"pdNumber": 156,
+	"userName": "千年奶薩",
+	"comment": "我是法律专业的，也在从事法律工作，如果有这样的板块我会很喜欢参与的。但是我觉得在NGA这样的游戏论坛里，不适合搞法律时政板块，从当年的大漩涡到现在的网事杂谈，包括下挂的各人个页面，各种键盘政治局和五毛美分日元党的乱战造成了多次论坛关停。"
 }, {
 	"id": "11",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd11.jpg",
-	"content": "几代人心血被毁！华能光伏项目推平3000亩沙漠林草地，集团回应…",
-	"pdPrice":"可把我气笑了",
-	"pdSold": "今天 09:36",
-	"pdNumber":156
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 19:23",
+	"pdNumber": 15,
+	"userName": "z317852602",
+	"comment": "虽然不是你们需要的人，但是对这事我真是支持的一逼！！有时候发个正经的相关咨询贴是真的秒沉，一说正事就没人的尴尬啊。 "
 }, {
 	"id": "12",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd12.jpg",
-	"content": "N币快清了，有人给我送礼物么 ",
-	"pdPrice": "seton",
-	"pdSold": "今天 19:23",
-	"pdNumber":15
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 09:52",
+	"pdNumber": 3,
+	"userName": "wohuilaile2018",
+	"comment": "兹磁一下，今年刚开始搞法律工作，单位案子一大堆感觉可以是个提升自己的板块 "
 }, {
 	"id": "13",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd13.jpg",
-	"content": "老哥们，想学习一下java有什么网课和书籍推荐吗？",
-	"pdPrice": "bigdickman",
-	"pdSold": "今天 09:52",
-	"pdNumber":3
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 18:29",
+	"pdNumber": 13,
+	"userName": "惠惠我媳妇",
+	"comment": "支持！"
 }, {
 	"id": "14",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd14.jpg",
-	"content": "面试结束后，hr打电话问我做不做项目管理，但是有试用期",
-	"pdPrice": "寅隋景寅明王",
-	"pdSold": "今天 18:29",
-	"pdNumber":13
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 08:30",
+	"pdNumber": 164,
+	"userName": "椿还鲲命，谁还湫情",
+	"comment": "法学院毕业的刑警，有资格么"
 }, {
 	"id": "15",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd15.jpg",
-	"content": "老婆的气功群，感觉被好多网友渗透了",
-	"pdPrice": "deadthere",
-	"pdSold": "今天 08:30",
-	"pdNumber":164
+	"pdImg": "../../static/img/shequ/touxiang.png",
+	"pdSold": "今天 19:21",
+	"pdNumber": 54,
+	"userName": "awoshiwower",
+	"comment": "法学生一个，想掺一脚"
 }, {
 	"id": "16",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd16.jpg",
-	"content": "你们给大师发的申请太多了，他以为遭到了攻击。 更新，有一千多人加他 ",
-	"pdPrice":"仓鼠提督",
-	"pdSold": "今天 19:21",
-	"pdNumber":54
-}, {
-	"id": "17",
-	"pdImg": "http://www.mescroll.com/demo/res/img/pd17.jpg",
-	"content": "寂寞就是一个人去看电影，结果发现这个影厅就只有我一个人看 ",
-	"pdPrice": "hdc8899",
+	"pdImg": "../../static/img/shequ/touxiang.png",
 	"pdSold": "30分钟前",
-	"pdNumber":8
+	"pdNumber": 8,
+	"userName": "gay兵76",
+	"comment": "这个主意很好~~10年经验的老法务在此~~ "
 }]

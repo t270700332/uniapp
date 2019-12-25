@@ -8,7 +8,13 @@
 	position: relative;
 	height: 100%;
 	padding: 0rpx 0rpx 40rpx 20rpx;
-	border-bottom: 2rpx solid #eee;
+	border-bottom: 1rpx solid #eee;
+}
+.pd-li:nth-child(odd) {
+	background-color: #fff0cd;
+}
+.pd-li:nth-child(even) {
+	background-color: #fff8e7;
 }
 .pd-li .pd-sold {
 	font-size: 24rpx;
@@ -19,7 +25,7 @@
 	right: 8px;
 }
 .pd-user {
-	border-bottom: 1rpx solid #eee;
+	border-bottom: 2rpx solid #eee;
 	border-top: 1rpx solid #eee;
 }
 .user-image {
